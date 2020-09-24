@@ -2,8 +2,8 @@ clear
 
 % Initialize values
 
-tau_rank = 1.0e5;
-tau_sep = -1.0e-8;
+tau_rank = 1.0e4;
+tau_sep = -1.0e-5;
 max_cuts = 25;
 
 % Set the bootstrap relaxation

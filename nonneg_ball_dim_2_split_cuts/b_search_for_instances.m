@@ -9,8 +9,8 @@ bootstrap = 4; % Shor + KSOC
 
 % Setup constants
 
-tau_sep = -1.0e-8;
-tau_rank = 10^5;
+tau_sep = -1.0e-5;
+tau_rank = 10^4;
 max_cuts = 25;
 max_iter = 100;
 
