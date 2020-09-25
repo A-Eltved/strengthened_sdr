@@ -10,8 +10,8 @@ end
 
 beta = 1; % Width of distribution for a
 R = 1; % We might as well fix this
-r = 0; 
-% r = rand*R;
+% r = 0; 
+r = rand*R;
 xt = randn(n,1);
 rt = r + (R-r)*rand;
 xhat = xt/norm(xt,2)*rt;
