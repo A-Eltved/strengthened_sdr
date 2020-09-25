@@ -37,21 +37,22 @@ for i = 1:nprobs
             if isfield(probs{i}.pshor,'gapClosure')
                 if ~isnan(probs{i}.pshor.gapClosure)
                     gapClosureShor(i) = probs{i}.pshor.gapClosure;
-                else
+                end
+            else
                     % disp('Separation not solved. Using KSOC local to calculate gap...')
-                    if probs{i}.pksoc.isExact
+                    if probs{i}.pksoc.isExact || probs{i}.pksoc.closed
                         loc = probs{i}.pksoc.sol.val;
                     else
                         loc = probs{i}.pksoc.local.fval;
                     end
                     probs{i}.pshor.gapClosure = 1 - (loc - probs{i}.pshor.sol.val)/(loc - probs{i}.pshor.baseSol.val);
                     probs{i}.pshor.closed = 0;
-                end
+                    gapClosureShor(i) = probs{i}.pshor.gapClosure;
             end
                 
             ncutsShor(i) = probs{i}.pshor.cuts.count;
             if probs{i}.pshor.r0cuts.count > 0
-                ncuts(i) = ncuts(i) + probs{i}.pshor.r0cuts.count;
+                ncutsShor(i) = ncutsShor(i) + probs{i}.pshor.r0cuts.count;
             end
             if probs{i}.pshor.sol.Y.rat >= probs{i}.options.rattol
                 idclosedShor(i) = true;
