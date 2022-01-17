@@ -1,2 +1,2 @@
-Code for the paper "Strengthened SDP Relaxation for an Extended Trust Region
-Subproblem with an Application to Optimal Power Flow", A. Eltved and S. Burer, http://www.optimization-online.org/DB_HTML/2020/09/8038.html
+Code accompanying paper: 
+Eltved, A., Burer, S. Strengthened SDP relaxation for an extended trust region subproblem with an application to optimal power flow. Math. Program. (2022). https://doi.org/10.1007/s10107-021-01737-9
